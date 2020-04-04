@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int size = (int)(Math.log10(a)+1);
+		int i,k=1;
+		
+		int q = a/10000;
+		int w = a/1000%10;
+		int e = a/100%10;
+		int r = a/10%10;
+		int t = a%10;	
+    
+		for(i=1;i>0;i--) {
+			System.out.println("["+q*(int)Math.pow(10,size-k)+"]");
+			k=k+1;
+			System.out.println("["+w*(int)Math.pow(10,size-k)+"]");
+			k=k+1;
+			System.out.println("["+e*(int)Math.pow(10,size-k)+"]");	
+			k=k+1;
+			System.out.println("["+r*(int)Math.pow(10,size-k)+"]");
+			k=k+1;
+			System.out.println("["+t*(int)Math.pow(10,size-k)+"]");		
+		}
+	}
+}
