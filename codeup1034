@@ -1,0 +1,11 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String aa = sc.nextLine();
+		//10->8
+		int x = Integer.valueOf(aa,8);
+		System.out.println(x);
+	}
+}
