@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int []arr = new int[1000];
+		int i = 0;
+    
+		while(true){			
+			arr[i] = sc.nextInt();
+			if(arr[i]==0) {break;}
+			System.out.println(arr[i]);
+			i++;
+		}		
+	}
+}
