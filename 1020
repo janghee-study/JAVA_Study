@@ -1,0 +1,15 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class Main{
+    public static void main(String[] args){
+        int i;
+        Scanner sc = new Scanner(System.in);
+        String date = sc.nextLine();
+        StringTokenizer token = new StringTokenizer(date,"-");
+        String zoomin = "";
+        for(i=0;i<2;i++){
+            zoomin+= token.nextToken();        
+        }
+        System.out.println(zoomin);
+    }
+}
