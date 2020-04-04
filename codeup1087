@@ -1,0 +1,15 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int sum=0,i=0;
+        while(true) {
+        	i++;
+        	sum=sum+i;
+        	if(sum>=a)break;
+        }
+        System.out.println(sum);
+    }
+}
