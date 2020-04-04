@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int i;
+        int []arr = new int[1];
+        for(i=0 ;i<1;i++){
+        	arr[i] = sc.nextInt();
+        	function(arr[0]);
+        }
+	}
+	private static void function(int i) {
+		if(i>=90&&i<=100)
+			System.out.println("A");
+		else if(i>=70&&i<=89)
+			System.out.println("B");
+		else if(i>=40&&i<=69)
+			System.out.println("C");
+		else
+			System.out.println("D");
+	}
+}
