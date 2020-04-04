@@ -12,10 +12,10 @@ public class Main{
         	arr[i]=st.nextToken();
         	i++;
         }
-        for(int z=0;z<=i-1;z++) {//i-1에서 30분소요됬움 ㅠㅠ
+        for(int z=0;z<=i-1;z++) {
         cnt[z] = Integer.parseInt(arr[z]);
         }
-        cr=(cnt[0]*cnt[1]*cnt[2]*cnt[3]);//자고아침에 깔끔하게 정리하도록
+        cr=(cnt[0]*cnt[1]*cnt[2]*cnt[3]);
 		double ccr = ((cr/8)/Math.pow(2, 10))/Math.pow(2, 10);
 	    System.out.printf("%.1f MB",ccr);   
     }
