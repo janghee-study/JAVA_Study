@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String aa = sc.nextLine();
+		String str = aa;
+		StringTokenizer st = new StringTokenizer(str,":");
+		String []time = new String[3];
+		
+		st.nextToken();
+		int i=0;
+		while(st.hasMoreTokens()) {
+			time[i] = st.nextToken();
+			i++;
+		}	
+		System.out.println(Integer.parseInt(time[0],10));		
+	}
+}
