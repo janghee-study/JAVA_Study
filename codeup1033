@@ -1,0 +1,11 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int aa = sc.nextInt();
+		String k = Integer.toHexString(aa);
+		String a=k.toUpperCase();
+		System.out.println(a);		
+	}
+}
