@@ -1,0 +1,30 @@
+import java.util.Scanner; //구데기 코딩;;
+import java.util.StringTokenizer;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for(int ppp=1;ppp<=2;ppp++){
+        	Scanner scan = new Scanner(System.in);
+        	String str = scan.nextLine();
+        	StringTokenizer st = new StringTokenizer(str," ");
+        	
+        	int[] arr = new int[24];
+        	int[] sss = new int[24];
+        	String []ars = new String[24];
+        
+        	int i=1;
+        	sss[i]=0;
+        	int temp=999;
+        	while(st.hasMoreTokens()){
+        		ars[i]=st.nextToken();
+        		arr[i]=Integer.parseInt(ars[i]);
+        		sss[arr[i]]++;
+        		if(temp>=arr[i])
+        			temp=arr[i];
+        		i++;
+        	}
+        	System.out.println(temp);
+        }
+    }
+}
