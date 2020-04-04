@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int d = sc.nextInt();
+        int n = sc.nextInt();
+        
+        int sum=0,i=1;
+        
+        while(true){
+        a=a+d;
+        i++;
+        if(i==n)break;
+        }
+        System.out.println(a);
+    }
+}
