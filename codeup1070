@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int aa = sc.nextInt();
+    function(aa);
+    }
+  private static void function(int i){
+	
+  	if(i==12||i==1||i==2) {
+  		System.out.println("winter");
+  	}
+  	else if(i==3||i==4||i==5) {
+  		System.out.println("spring");
+  	}
+  	else if(i==6||i==7||i==8) {
+  		System.out.println("summer");
+  	}
+  	else
+	  	System.out.println("fall");
+  }
+}
