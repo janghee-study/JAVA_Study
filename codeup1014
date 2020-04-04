@@ -1,0 +1,9 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner ad = new Scanner(System.in);
+		String a = ad.next();
+		String b = ad.next();
+		System.out.print(b+" "+a);	
+	}
+}
