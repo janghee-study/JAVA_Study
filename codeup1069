@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //String []arr = new String[1];
+        String aa = sc.nextLine();
+        char xx = aa.charAt(0);
+        function(xx);
+	}
+	private static void function(char i) {
+		if(i=='A')
+			System.out.println("best!!!");
+		else if(i=='B')
+			System.out.println("good!!");
+		else if(i=='C')
+			System.out.println("run!");
+		else if(i=='D')
+			System.out.println("slowly~");
+		else
+			System.out.println("what?");
+	}
+}
