@@ -1,0 +1,48 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int w = sc.nextInt();
+		int h = sc.nextInt();
+		int n = sc.nextInt();
+		int arr [][] = new int [100][100];
+		int ass [][] = new int [100][100];
+		int i,j;
+		while(w>=1&&w<=100&&h>=1&&h<=100&&n>=1&&n<=10) {
+			
+			for(i=1 ; i<=n ; i++) {
+				for(j=1 ; j<=4 ; j++) {
+					arr [i][j] = sc.nextInt();
+					ass [i][j] = 0;               //ass에 0으로 채워준다.
+				}
+			}
+			for(i=1 ; i<=n ; i++) {
+				for(j=1 ; j<=4 ; j++) {
+					int l = arr[i][1];
+					int d = arr[i][2];
+					int x = arr[i][3];
+					int y = arr[i][4];
+					//if(d!=0||d!=1&&x<0&&x>100-h&&y<0&&x>100-y)break;
+					//System.out.println(y+" ");
+					if(d==1) {
+						for(int xx=0 ; xx<=l ; xx++ ) {
+							ass[x+xx][y] = 1;
+						}
+					}
+					else {
+						for(int yy=0 ; yy<=l ; yy++ ) {
+							ass[x][y+yy] = 1;
+						}
+					}
+				}
+			}
+		}
+		for(i=1 ; i<=n ; i++) {
+			for(j=1 ; j<=4 ; j++) {
+				System.out.println(ass[i][j]);
+			}
+		}
+	}
+}
