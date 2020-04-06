@@ -1,0 +1,41 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int arr [][] = new int [100][100];
+		
+		int i,j;
+		int x = 7, y = 7;
+		int q=2,w=2;
+		for(i=1;i<=10;i++) {
+			for(j=1;j<=10;j++) {
+				arr[i][j] = sc.nextInt();
+				if(arr[i][j] == 2) {
+					x=i;
+					y=j;
+				}
+			}
+		}
+		int qq,ww;
+		System.out.println();
+		outerloop:
+		for(i=q;i<=x;i++) {
+			for(j=w;j<=y;j++) {
+				q=i;////////////////////////////////////값을 밖으로 끌고 나가서 시작지점을 바꾸고싶음 temp로 가능한지??확인
+				w=j;
+				if(arr[i+1][j] == 1) break outerloop;
+				arr[i][j]=9;
+				
+			}
+		}
+		
+		for(i=1;i<=10;i++) {
+			for(j=1;j<=10;j++) {
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}	
