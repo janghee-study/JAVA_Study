@@ -6,8 +6,10 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		int arr [][] = new int [100][100];
 		
-		int i=2,j=2;
-		int x = 7, y = 7;
+
+		boolean status = true;
+		int i,j,x=0,y=0;
+		int q=2, w=2;
 		for(i=1;i<=10;i++) {
 			for(j=1;j<=10;j++) {
 				arr[i][j] = sc.nextInt();
@@ -19,19 +21,26 @@ public class Main {
 		}
 		System.out.println();
 		
-		while(arr[x][y]==9) {		
-			if(arr[i][j]!=0) {
-				i++;
-				arr[i][j]=9;
+		while(status) {
+			for(i=q;i<=x;i++) {
+				for(j=w;j<=y;j++) {
+                    if (arr[i][j] == 0) {
+                        arr[i][j] = 9;
+                        w++;
+                    } else if (arr[i][j] == 1) {
+                        q++;
+                        w--;
+                        
+                        break;
+                    } else if (arr[i][j] == 2) {
+                    	
+                        arr[i][j] = 9;
+                        status = false;
+                    }
+				}
 			}
-			else if(arr[i+1][j]!=0){
-				j++;
-				arr[i][j]=9;
-			}
-			else {	
-			}	
+			if(!false)break;
 		}
-		
 		for(i=1;i<=10;i++) {
 			for(j=1;j<=10;j++) {
 				System.out.print(arr[i][j]+" ");
