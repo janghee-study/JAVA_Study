@@ -1,33 +1,38 @@
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Stack;
 import java.io.InputStreamReader;
+import java.util.Stack;
 public class Main {
 	public static void main(String[] args) throws IOException {
-		Stack<Character> stack = new Stack<Character>();//stack
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));//buffer		
-		int cnt = Integer.parseInt(br.readLine());
-		for(int i=1;i<=cnt;i++) {
-			stack.clear();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Stack<Character> stack = new Stack<Character>();
+		int n = Integer.parseInt(br.readLine());
+		
+		for(int i=0;i<n;i++) {		
 			String input = br.readLine();
-			outerloop:
-			for(int j=1;j<=input.length();j++) {
+			stack.clear();
+			boolean status = true;
+			
+			for(int j=0;j<input.length();j++) {
 				if(input.charAt(j) =='(') {
 					stack.push(input.charAt(j));
-				} 
+				}
 				else if(input.charAt(j) ==')') {
-					if(!stack.isEmpty()) {
+					if(!stack.isEmpty()) {/////empty랑 isEmpty랑 동일하다
 						stack.pop();
 					}
 					else {
-						break outerloop;
+						status=false;
+						break;
 					}
 				}
 			}
-			if(!stack.isEmpty())
-				System.out.println("NO");
-			else 
-				System.out.println("YES");
+			if(stack.empty()&&status==true) {/////////////////////////////
+				System.out.println("YES");////////////////////////////////
+			}/////////////////////////////////////////////////////////////
+			else if(!stack.isEmpty()||status==false) {////||이부분 굉장히중요함
+				System.out.println("NO");/////////////////////////////////
+			}
 		}
 	}
 }
