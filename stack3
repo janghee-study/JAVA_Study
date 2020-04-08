@@ -1,0 +1,36 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.Stack;
+import java.io.InputStreamReader;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+		Stack<Character> stack = new Stack<Character>();//stack
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));//buffer		
+		//boolean status = true;//status
+		int cnt = Integer.parseInt(br.readLine());
+		
+		for(int i=1;i<=cnt;i++) {
+		   String input = br.readLine();
+		   for(int j=1;j<=input.length();j++) {
+			   if(input.charAt(j) =='(') {
+				   stack.push(input.charAt(j));
+			   }
+			   else if(input.charAt(j) ==')') {
+				   if(!stack.isEmpty()) {
+					   stack.pop();
+				   }
+				   else {
+					   //status = false;
+					   break;
+				   }
+			   }
+		   }
+		   if(!stack.isEmpty())
+			   System.out.println("NO");
+		   else
+			   System.out.println("YES");
+			}
+		}
+}
