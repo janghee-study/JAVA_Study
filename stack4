@@ -6,7 +6,7 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		Stack<Character> stack = new Stack<Character>();
-		for(int n=1;n<=10;n++) {		
+		while(true) {
 			String input = br.readLine();
 			stack.clear();
 			boolean status = true;
@@ -17,7 +17,8 @@ public class Main {
 				}	
 				else if(input.charAt(j) ==')') {
 					if(stack.size()!=0&&stack.peek()=='(') {
-						stack.pop();					}
+						stack.pop();					
+					}
 					else {
 						status=false;
 						break;
@@ -25,7 +26,8 @@ public class Main {
 				}
 				else if(input.charAt(j) ==']') {
 					if(stack.size()!=0&&stack.peek()=='[') {
-						stack.pop();					}
+						stack.pop();					
+					}
 					else {
 						status=false;
 						break;
