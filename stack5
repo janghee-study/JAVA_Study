@@ -1,0 +1,36 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Stack;
+public class Main {	 
+    public static void main(String[] args) throws IOException {
+ 
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Stack<Integer> stack = new Stack<Integer>();
+        int status=0;
+        int a = 0;
+        int n = Integer.parseInt(br.readLine());
+        for(int i=0;i<n;i++) {
+        	int m = Integer.parseInt(br.readLine());
+        	m = max(m , status);
+        	for(int j=status;j<=m;j++) {
+        		stack.push(j);
+        		if(m==stack.peek()) {
+            		status=stack.peek();
+        			stack.pop();
+        			System.out.println("-");
+        			break;
+        		}
+        		System.out.println("+");
+        	}
+        }
+    }
+	private static int max(int a, int b) {
+		
+		if(a>=b) {
+			return a;	
+		}
+		else
+			return b;
+	}
+}
