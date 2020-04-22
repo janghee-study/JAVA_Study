@@ -1,0 +1,42 @@
+import java.util.Scanner;
+import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Main {
+   public static void main(String[] args) {
+	   Scanner sc = new Scanner(System.in);
+
+	   Queue<Integer> queue = new LinkedList<Integer>();
+	   Stack<Integer> stack = new Stack<Integer>();
+	   int cnt = sc.nextInt();
+	   
+	   for(int i=0; i<cnt; i++) {
+		   String input = sc.next();
+		   
+		   
+		   if(input.contains("push")) {
+			   int input2 = sc.nextInt();
+			   queue.add(input2);
+			   stack.push(input2);
+		   }
+		   else if(input.equals("pop")) {
+			   System.out.println(queue.isEmpty()?-1:queue.poll());
+			   if(!queue.isEmpty())
+				   stack.pop();
+		   }
+		   else if(input.equals("size")) {
+			   System.out.println(queue.size());
+		   }
+		   else if(input.equals("empty")) {
+			   System.out.println(queue.isEmpty()?1:0);
+		   }
+		   else if(input.equals("front")) {
+			   System.out.println(queue.isEmpty()?-1:queue.peek());
+		   }
+		   else if(input.equals("back")) {
+			   System.out.println(queue.isEmpty()?-1:stack.peek());
+		   }   
+	   }
+   	}
+}
