@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Main {
+   public static void main(String[] args) {
+	   Scanner sc = new Scanner(System.in);
+	   Queue<Integer> queue = new LinkedList<Integer>();
+	   int input = sc.nextInt();
+	   
+	   for(int i=1;i<=input;i++) {
+		   queue.add(i);		   
+	   }
+	   while(queue.size()!=1) {
+	   
+		   queue.remove();
+		   queue.add(queue.peek());
+		   queue.remove();
+		   
+	   }
+
+	   System.out.println(queue.peek());
+   }
+}
