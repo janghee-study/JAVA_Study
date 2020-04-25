@@ -24,7 +24,7 @@ public class Main{
         		maxcnt=j;
         	}
         }
-        char st = (char) (maxcnt+'a');
+        char st = (char) (maxcnt+'A');
         sc.close();
         
         for(int k=0;k<=25;k++) {        	        	
