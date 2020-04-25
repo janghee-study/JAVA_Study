@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+    	String str = sc.nextLine();
+    	int i = 0;
+    	String arr[] = new String[2];
+    	String a[] = new String[2];
+    	a[0]="";//reset->null방지
+    	a[1]="";//reset->null방지
+    	int[] sss = new int[2];
+    	
+    	StringTokenizer st = new StringTokenizer(str," ");
+    	while(st.hasMoreTokens()){    		
+        	arr[i]=st.nextToken();    		    		    		
+        	for(int j=arr[i].length()-1;j>=0;j--) {
+        		char c = arr[i].charAt(j);
+        		a[i]=a[i]+c;
+        		
+        	}
+    		sss[i]=Integer.parseInt(a[i]);
+        	i++; 
+        }
+    	System.out.println(Math.max(sss[0],sss[1]));
+    	sc.close();
+    }
+}
