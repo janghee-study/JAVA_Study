@@ -6,7 +6,7 @@ public class Main{
         int num = sc.nextInt();        
         int count=0;
         //이진수길이확인
-        int aaa = (int)Math.pow(2,num-1)-1;
+        int aaa = (int)Math.pow(2,num)-1;
         //System.out.println(aaa);
         
         String str = Integer.toBinaryString(aaa);
