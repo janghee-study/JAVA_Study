@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int i=1, n=sc.nextInt(), cnt = 0, 
+		arr[] = new int [1000];
+        int MIN = Integer.MAX_VALUE;
+        arr[0]=0;
+		while(n!=1){
+			if(n%3==0&&n!=3) {
+				arr[i] += arr[i-1];
+				n=n/3;
+			}
+			
+			else if(n%2==0&&n!=2){
+				arr[i] += arr[i-1];
+				n=n/2;
+			}
+			else  {
+				arr[i] += arr[i-1];
+				n-=1;
+			}
+			MIN = Math.min(MIN, arr[i]);
+			System.out.println(n);
+			i++;
+			cnt++;
+		}
+		System.out.println(cnt);
+		sc.close();
+	}
+}
+#1463
