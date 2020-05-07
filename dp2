@@ -1,54 +1,20 @@
-import java.util.Scanner;
+import java.util.*;
 
-public class Main{
-	public static void main(String[] args){
+public class Main {
+	public static int mod= 15746;
+	public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();        
-        int count=0;
-        //이진수길이확인
-        int aaa = (int)Math.pow(2,num)-1;
-        //System.out.println(aaa);
         
-        String str = Integer.toBinaryString(aaa);
-    	for(num=aaa;num>=0;num--) {
-        	String bin = Integer.toBinaryString(num);
-        	int j = getCharNumber(bin,'0');
-        	
-    		if(bin.contains("00")&&j%2==0||j==0) {
-        		
-        		if(bin.length()==str.length()) {
-        			//System.out.println(bin);
-        			count++;
-        		}
-        		else {
-        			int cnt = str.length()-bin.length();
-        			for(int t=0;t<cnt;t++) {
-        				bin="0"+bin;
-        			}        			
-        			if(getCharNumber(bin,'0')%2==0) {      				
-        				//System.out.println(bin);
-        				count++;
-        			}
-        		}
-        	}
-    	}
-		if(str.length()%2==0) {
-			count++;
-			//for(int a=0;a<str.length();a++) {
-			//	System.out.print("0");
-			//}
-			System.out.println();
-		}
-		System.out.println(count);
-			
-	}
-	private static int getCharNumber(String str, char c) {
-        int count = 0;
-        for(int i=0;i<str.length();i++)
-        {
-            if(str.charAt(i) == c)
-                count++;
+        int n = sc.nextInt();
+        int arr[]=new int[1000001];
+        
+        arr[1]=1;
+        arr[2]=2;
+        arr[3]=3;
+        
+        for(int i=3;i<=n;i++) {
+        	arr[i]=arr[i-1]+arr[i-2];
         }
-        return count;
+        System.out.println(arr[n]%mod);
 	}
-}
+}#1904
