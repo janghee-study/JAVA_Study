@@ -12,9 +12,10 @@ public class Main {
         arr[2]=2;
         arr[3]=3;
         
-        for(int i=3;i<=n;i++) {
+        for(int i=4;i<=n;i++) {
         	arr[i]=arr[i-1]+arr[i-2];
+        	arr[i]%=mod;
         }
-        System.out.println(arr[n]%mod);
+        System.out.println(arr[n]);
 	}
 }#1904
