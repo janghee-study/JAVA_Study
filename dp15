@@ -1,0 +1,43 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int [n+1];
+        int dp[] = new int [n+1];
+        int sum[] = new int [n+1];
+        
+        int max; //define max
+        int maxim = Integer.MIN_VALUE;
+
+		int alpha=0;
+		
+        for(int i=0;i<n;i++) {//input
+        	arr[i]=sc.nextInt();        	
+        }
+
+        for(int i=1;i<=n;i++) {
+        	alpha=0;
+            max = Integer.MIN_VALUE;
+
+    		for(int j=0;j<=n-i;j++) {
+    			sum[j]=0;
+    			for(int k=0;k<i;k++) {    				
+    				sum[j]+=arr[k+alpha];
+    			}
+				//System.out.println(sum[j]);
+    			alpha++;
+    			if(sum[j]>max) {
+    				max=sum[j];
+    	    		dp[i]=max;
+    			}
+    		}    		
+    		if(dp[i]>maxim) {
+    			maxim=dp[i];
+			}    		
+    	}
+    	System.out.println(maxim);
+    }
+}
+//1912
+//time over
