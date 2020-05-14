@@ -17,7 +17,11 @@ public class Main {
         	}        	
         }
         int sum = input-arr[number];
-        System.out.println((number+1-sum)+"/"+sum);
-         
+        if(number%2==0) {
+        	System.out.println(sum+"/"+(number+1-sum));
+        }
+        else {
+            System.out.println((number+1-sum)+"/"+sum);
+        }
 	}
 }
