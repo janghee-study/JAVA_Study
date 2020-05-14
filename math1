@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int input = sc.nextInt();
+        int arr[] = new int [10000];
+        int number=0;
+        
+        
+        for(int i=1;i<100000;i++) {
+        	arr[i+1]=arr[i]+i;
+
+        	if(arr[i]<=input&&input<=arr[i+1]) {//input detail
+        		number=i;
+        		//System.out.println(number);
+        		break;
+        	}        	
+        }
+        int sum = input-arr[number];
+        System.out.println((number+1-sum)+"/"+sum);
+         
+	}
+}
