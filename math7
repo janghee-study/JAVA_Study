@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int cnt = 0;
+		int sum = 0;
+		int print = 0;
+		while(true) {
+			
+			
+			int a = sc.nextInt();
+			int b = 2*a;
+			
+			if(a==0)break;
+			print=0;
+			for(int i=a+1;i<=b;i++) {
+				cnt = 0;
+				for(int j=1;j<=i;j++) {
+					if(i%j==0) {
+						cnt++;
+					}
+	
+				}
+				if(cnt==2) {
+					print++;
+				}				
+			}
+			System.out.println(print);
+
+		}	
+	}
+}//4948
