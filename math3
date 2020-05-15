@@ -10,10 +10,10 @@ public class Main {
         int cnt=0;
         
         
-        /*while(step<High) {
+        while(step<High) {
         	step+=a;
         	cnt++;        	
-        }*/
+        }
     	
         System.out.println(cnt);
         
