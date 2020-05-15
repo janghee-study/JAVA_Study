@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int up = sc.nextInt();
+        int down = sc.nextInt();
+        int High = sc.nextInt();
+        int a = up-down;
+        int step=1;
+        int cnt=0;
+        
+        
+        /*while(step<High) {
+        	step+=a;
+        	cnt++;        	
+        }*/
+    	
+        System.out.println(cnt);
+        
+	}
+}
+//2869
